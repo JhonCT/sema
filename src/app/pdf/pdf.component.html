@@ -1,0 +1,22 @@
+<div>
+    <label> Pdf src: </label>
+    <input (change)="onFileSelected();" type="file" id="file" >
+    <div *ngIf="!showall">
+        <button type="button" (click)="movePage(-1)">previous</button>
+        <input [(ngModel)]="page" type="text" id="page" >
+        <button  type="button" (click)="movePage(1)">next</button>    
+    </div>
+    <div class="ui toggle checkbox">
+        <input type="checkbox" name="public" (click)="showAll()">
+        <label>Ver todo</label>
+      </div>
+      <p>{{ ecoNombre }}</p>      
+</div>
+
+<pdf-viewer
+[src]="pdfSrc"
+[render-text]="true"
+[page]="page"
+[show-all]="showall"
+style="display: block;" >    
+</pdf-viewer> 

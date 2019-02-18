@@ -1,0 +1,18 @@
+.busq {
+    width: 80%;
+    background: #9A2E46;
+    color: white;
+}
+
+.busq:hover {
+    background: #771526;   
+    color: blanchedalmond;
+}
+
+.busa {
+    width: 95%;
+}
+
+.container {
+    padding-top: 6%;
+}

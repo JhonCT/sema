@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="ui grid">
+    <div class="sixteen wide column"> Coincidencias encontradas: </div>
+  
+    <div class="four wide column" >     
+      <sui-accordion [closeOthers]="false" class="styled" *ngFor="let eco of ecos">
+        
+        <sui-accordion-panel (click)="verEco(eco.nombre, eco.numeroPagina)">
+          <div title>
+              <i class="dropdown icon"></i>
+              {{ eco.nombre }}
+          </div>
+          <div content>
+              <p>Página {{ eco.numeroPagina }}</p>
+          </div>
+        </sui-accordion-panel>
+      </sui-accordion>
+    </div>    
+    
+    <div class="twelve wide column">  
+      <div style="margin: 0 auto; width: 70%">
+        <app-pdf [ecoNombre]="enom" [ecoPagina]="page"></app-pdf>
+      </div>
+    </div>
+   
+  </div>
+</div>

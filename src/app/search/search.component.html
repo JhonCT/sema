@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="ui grid">
+    <div class="row">
+      <div class="four wide column"></div>
+      <div class="eight wide column">      
+        <div class="ui fluid image">
+            <img src="./assets/img/Centenario.png">
+          </div>
+      </div>
+      <div class="four wide column"></div>
+    </div>
+  
+    <div class="row">
+        <div class="four wide column"></div>
+        <div class="eight wide column">
+          <div class="ui massive fluid icon input ">
+              <i class="search icon"></i>
+            <input type="text" [(ngModel)]="name" placeholder="Nombre">             
+          </div>
+        </div>
+        <div class="four wide column"></div>   
+    </div>  
+    
+    <div class="four column row">
+        <div class="column"></div>
+        <div class="column" style="text-align: center;">
+          <button class="massive ui button busq" (click)="buscarNombres()">Buscar</button>
+        </div>
+        <div class="column" style="text-align: center;">
+          <button class="massive ui button busq" (click)="show()" >Busqueda Avanzada</button>
+        </div>
+        <div class="column"></div>
+      </div>
+    </div>
+  
+    <!-- Busqueda avanzada-->
+    <div *ngIf="edited" class="ui two column centered grid">
+      <div class="column">
+        <div class="ui grid" style="text-align: center;">
+            <div class="three column row">
+                <div class="column">
+                  <div class="ui medium input busa">
+                      <input type="text" placeholder="Nombre">             
+                  </div>  
+                </div>
+                <div class="column">
+                  <div class="ui medium input busa">
+                    <input type="text" placeholder="Año inicio">             
+                  </div> 
+                </div>
+                <div class="column">
+                  <div class="ui medium input busa">
+                      <input type="text" placeholder="Año fin">             
+                  </div> 
+                </div>
+              </div>
+            </div>
+      </div>      
+      <div class="eight column centered row">
+        <div class="column">
+        </div>
+        <div class="column" style="text-align: center;">
+          <button class="ui medium button busq">Right</button>
+        </div>
+      </div>    
+    </div>  
+</div>
